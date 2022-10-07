@@ -20,9 +20,9 @@ $countProcs = Get-Process -Name $param1 -IncludeUserName -ErrorAction SilentlyCo
 
 Queries with "desired user" input
 if($param3){
-$userProcs = Get-Process -Name $param1 -IncludeUserName -ErrorAction SilentlyContinue| Where-Object UserName -Like $param3* |  Measure-Object | Select -Expand count
-$userProcsFalse = Get-Process -Name $param1 -IncludeUserName -ErrorAction SilentlyContinue| Where-Object UserName -Notlike $param3* | Select-Object -Expand UserName
-$countingFalse = $userProcsFalse | Measure-Object | Select -Expand count
+    $userProcs = Get-Process -Name $param1 -IncludeUserName -ErrorAction SilentlyContinue| Where-Object UserName -Like $param3* |  Measure-Object | Select -Expand count
+    $userProcsFalse = Get-Process -Name $param1 -IncludeUserName -ErrorAction SilentlyContinue| Where-Object UserName -Notlike $param3* | Select-Object -Expand UserName
+    $countingFalse = $userProcsFalse | Measure-Object | Select -Expand count
 
 
 if ($countProcs -eq 0){
