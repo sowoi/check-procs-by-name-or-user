@@ -9,9 +9,9 @@ function Invoke-IcingaCheckProcsbyNameorUser()
         # Ensure only 0-2 values are allowed for Verbosity
         [ValidateSet(0, 1, 2)]
         [int]$Verbosity     = 0,
-		$UserMonProcess = $null,
-		$UserMonDesired = '*',
-		[int]$MaxProcsAllowed = 1
+        $UserMonProcess = $null,
+	$UserMonDesired = '*',
+	[int]$MaxProcsAllowed = 1
     );
 
     # Create a new object we can check on. This will include
