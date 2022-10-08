@@ -38,7 +38,7 @@ function Invoke-IcingaCheckProcsbyNameorUser()
    $Check.CritIfLowerEqualThan(1)  | Out-Null;
    $Check.WarnIfLowerThan($MaxProcsAllowed)  | Out-Null;
    $Check.CritIfGreaterThan($MaxProcsAllowed) | Out-Null;
-   $Check2.ritIfGreaterThan(0) | Out-Null;
+   $Check2.CritIfGreaterThan(0) | Out-Null;
  
    $CheckPackage = New-IcingaCheckPackage `
                         -Name 'ProcessandUserCheck Package' `
