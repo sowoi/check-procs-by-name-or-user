@@ -38,10 +38,10 @@ function Invoke-IcingaCheckProcsbyNameorUser()
    $Check.CritIfLowerEqualThan(1)  | Out-Null;
    $Check.WarnIfLowerThan($MaxProcsAllowed)  | Out-Null;
    $Check.CritIfGreaterThan($MaxProcsAllowed) | Out-Null;
-   $Check2.WarnOutOfRange($Warning).CritOutOfRange($Critical) | Out-Null;
+   $Check2.ritIfGreaterThan(0) | Out-Null;
  
    $CheckPackage = New-IcingaCheckPackage `
-                        -Name 'Tutorial Package' `
+                        -Name 'ProcessandUserCheck Package' `
                         -Checks @(
                             $Check,
                             $Check2
