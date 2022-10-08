@@ -44,7 +44,8 @@ elseif ($countProcs -lt $param2){
 
 
 else{
- if ($countProcs -eq $param2){
+
+if ($countProcs -eq $param2){
    Write-Host "OK: Found $param2 process running of $param1 .  All procs are run by user $param3"
    exit 0
    }
